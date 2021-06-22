@@ -59,8 +59,7 @@ public class Coins extends Canvas {
         Toolkit t = Toolkit.getDefaultToolkit();
         Image i = t.getImage("NewStar.png");
         graphics.drawImage(i, this.x, this.y, this);
-//            graphics.setFont(new Font("SCORE", Font.PLAIN,  50));
-//            graphics.drawString(s, 50, 100);
+
 
     }
 }
