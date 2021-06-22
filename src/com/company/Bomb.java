@@ -39,7 +39,7 @@ public class Bomb extends Canvas {
         return width;
     }
 
-    public void Moving(int y, int x) {
+    public void Moving() {
         if (Def.GRASS_Y == this.y || Def.PERSON_START_Y == this.y && (Def.PERSON_START_X - 40 < this.x) && (this.x < Def.PERSON_START_X + 100) || Def.PERSON_START_Y == this.y && (this.x + 40 >= Def.PERSON_START_X - 40) && (this.x + 40 < Def.PERSON_START_X + 100)) {
             this.y = -1000;
             this.x = random(100, 1820);

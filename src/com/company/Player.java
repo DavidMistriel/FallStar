@@ -93,14 +93,14 @@ public class Player extends Canvas {
 
     public void Moving() {
         if (Rocket.Lives > 0) {
-            this.coin1.Moving(coin1.getY(), coin1.getX());
-            this.coin2.Moving(coin2.getY(), coin2.getX());
-            this.coin3.Moving(coin3.getY(), coin3.getX());
-            this.coin4.Moving(coin4.getY(), coin4.getX());
-            this.coin5.Moving(coin5.getY(), coin5.getX());
-            this.bomb.Moving(bomb.getY(), bomb.getX());
-            this.bomb2.Moving(bomb.getY(), bomb.getX());
-            this.rocket.Moving(rocket.getY(), rocket.getX());
+            this.coin1.Moving();
+            this.coin2.Moving();
+            this.coin3.Moving();
+            this.coin4.Moving();
+            this.coin5.Moving();
+            this.bomb.Moving();
+            this.bomb2.Moving();
+            this.rocket.Moving();
 
         }
 

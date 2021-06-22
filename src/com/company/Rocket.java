@@ -36,7 +36,7 @@ public class Rocket extends Canvas {
     }
 
 
-    public void Moving(int y, int x) {
+    public void Moving() {
 
         if (0 == this.x || ((this.y < Def.PERSON_START_Y + 200) && (Def.PERSON_START_Y < this.y)) && (Def.PERSON_START_X - Def.LH_WIDTH < this.x) && (this.x < Def.PERSON_START_X + 80)) {
             this.y = Def.PERSON_START_Y + 50;

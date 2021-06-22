@@ -27,7 +27,7 @@ public class Coins extends Canvas {
     }
 
 
-    public void Moving(int y, int x) {
+    public void Moving() {
         this.SCoins = 3;
         this.SCoins = this.rocket.Lives;
         if (Def.GRASS_Y == this.y || Def.PERSON_START_Y == this.y && (Def.PERSON_START_X - 40 < this.x) && (this.x < Def.PERSON_START_X + 100) || Def.PERSON_START_Y == this.y && (this.x + 40 >= Def.PERSON_START_X - 40) && (this.x + 40 < Def.PERSON_START_X + 100)) {
