@@ -49,7 +49,12 @@ public class Bomb extends Canvas {
 
         }
         if (Def.PERSON_START_Y == this.y && (Def.PERSON_START_X - 40 < this.x) && (this.x < Def.PERSON_START_X + 100) || Def.PERSON_START_Y == this.y && (this.x + 40 >= Def.PERSON_START_X - 40) && (this.x + 40 < Def.PERSON_START_X + 100)) {
-            Coins.SCORE -= 7;
+            if(Coins.SCORE<7){
+                Coins.SCORE=0;
+            }
+            else {
+                Coins.SCORE -= 7;
+            }
             this.y = -1000;
             this.x = random(100, 1820);
             System.out.println(Coins.SCORE);
