@@ -27,10 +27,6 @@ public class Coins extends Canvas {
     }
 
 
-    public int getSCORE() {
-        return SCORE;
-    }
-
     public void Moving(int y, int x) {
         this.SCoins = 3;
         this.SCoins = this.rocket.Lives;

@@ -1,25 +1,19 @@
 package com.company;
 
 import java.awt.*;
-import java.util.Random;
 
 public class Player extends Canvas {
 
-    public int random(int min, int Max) {
-        Random random = new Random();
-        return random.nextInt(Max - min) + min;
-    }
-
     private Body person;
-    private Body leftleg;
-    private Body rightleg;
+    private Body leftLeg;
+    private Body rightLeg;
     private Body head;
-    private Body lefthand;
-    private Body righthand;
+    private Body leftHand;
+    private Body rightHand;
     private Grass grass;
     private Floor ground;
-    private Face lefteye;
-    private Face righteye;
+    private Face leftEye;
+    private Face rightEye;
     private Face mouth;
     private Coins coin1;
     private Coins coin2;
@@ -32,15 +26,15 @@ public class Player extends Canvas {
 
     public Player() {
         this.person = new Body(Def.PERSON_START_X, Def.PERSON_START_Y, Def.PERSON_WIDTH, Def.PERSON_HEIGHT);
-        this.rightleg = new Body(person.getX() + 50, person.getY() + 100, Def.RL_WIDTH, person.getHeight());
-        this.leftleg = new Body(person.getX(), person.getY() + 100, Def.LL_WIDTH, person.getHeight());
+        this.rightLeg = new Body(person.getX() + 50, person.getY() + 100, Def.RL_WIDTH, person.getHeight());
+        this.leftLeg = new Body(person.getX(), person.getY() + 100, Def.LL_WIDTH, person.getHeight());
         this.head = new Body(person.getX() + 10, person.getY() - 53, Def.HEAD_WIDTH, person.getHeight() - 49);
-        this.righthand = new Body(person.getX() - 26, person.getY(), Def.RH_WIDTH, person.getHeight());
-        this.lefthand = new Body(person.getX() + 81, person.getY(), Def.LH_WIDTH, person.getHeight());
+        this.rightHand = new Body(person.getX() - 26, person.getY(), Def.RH_WIDTH, person.getHeight());
+        this.leftHand = new Body(person.getX() + 81, person.getY(), Def.LH_WIDTH, person.getHeight());
         this.grass = new Grass(Def.GRASS_X, Def.GRASS_Y, Def.GRASS_WIDTH, Def.GRASS_HEIGHT);
         this.ground = new Floor(grass.getX(), grass.getY() + grass.getHeight(), grass.getWidth(), Def.WINDOW_HEIGHT - grass.getHeight() - grass.getY());
-        this.lefteye = new Face(person.getX() + 20, person.getY() - 41, Def.EYE_WIDTH, person.getHeight() - 90);
-        this.righteye = new Face(person.getX() + 50, person.getY() - 41, Def.EYE_WIDTH, person.getHeight() - 90);
+        this.leftEye = new Face(person.getX() + 20, person.getY() - 41, Def.EYE_WIDTH, person.getHeight() - 90);
+        this.rightEye = new Face(person.getX() + 50, person.getY() - 41, Def.EYE_WIDTH, person.getHeight() - 90);
         this.mouth = new Face(person.getX() + 25, person.getY() - 20, Def.MOUTH_WIDTH, person.getHeight() - 90);
         this.coin1 = new Coins(100, -100, Def.COIN_WIDTH, Def.COIN_HEIGHT);
         this.coin2 = new Coins(300, -150, Def.COIN_WIDTH, Def.COIN_HEIGHT);
@@ -57,14 +51,14 @@ public class Player extends Canvas {
     public void moveRight() {
         if (Rocket.Lives > 0) {
             this.person.moveRight();
-            this.rightleg.moveRight();
-            this.leftleg.moveRight();
+            this.rightLeg.moveRight();
+            this.leftLeg.moveRight();
             this.head.moveRight();
-            this.righthand.moveRight();
-            this.lefthand.moveRight();
+            this.rightHand.moveRight();
+            this.leftHand.moveRight();
             this.mouth.moveRight();
-            this.lefteye.moveRight();
-            this.righteye.moveRight();
+            this.leftEye.moveRight();
+            this.rightEye.moveRight();
         }
     }
 
@@ -72,28 +66,28 @@ public class Player extends Canvas {
     public void moveLeft() {
         if (Rocket.Lives > 0) {
             this.person.moveLeft();
-            this.rightleg.moveLeft();
-            this.leftleg.moveLeft();
+            this.rightLeg.moveLeft();
+            this.leftLeg.moveLeft();
             this.head.moveLeft();
-            this.righthand.moveLeft();
-            this.lefthand.moveLeft();
+            this.rightHand.moveLeft();
+            this.leftHand.moveLeft();
             this.mouth.moveLeft();
-            this.lefteye.moveLeft();
-            this.righteye.moveLeft();
+            this.leftEye.moveLeft();
+            this.rightEye.moveLeft();
         }
     }
 
     public void jump(int jump) {
         if (Rocket.Lives > 0) {
             this.person.jump(jump);
-            this.rightleg.jump(jump);
-            this.leftleg.jump(jump);
+            this.rightLeg.jump(jump);
+            this.leftLeg.jump(jump);
             this.head.jump(jump);
-            this.righthand.jump(jump);
-            this.lefthand.jump(jump);
+            this.rightHand.jump(jump);
+            this.leftHand.jump(jump);
             this.mouth.jump(jump);
-            this.lefteye.jump(jump);
-            this.righteye.jump(jump);
+            this.leftEye.jump(jump);
+            this.rightEye.jump(jump);
         }
     }
 
@@ -125,13 +119,13 @@ public class Player extends Canvas {
         this.rocket.paint(graphics);
         if (Rocket.Lives > 0) {
             this.person.paint(graphics);
-            this.leftleg.paint(graphics);
-            this.rightleg.paint(graphics);
+            this.leftLeg.paint(graphics);
+            this.rightLeg.paint(graphics);
             this.head.paint(graphics);
-            this.lefthand.paint(graphics);
-            this.righthand.paint(graphics);
-            this.lefteye.paint(graphics);
-            this.righteye.paint(graphics);
+            this.leftHand.paint(graphics);
+            this.rightHand.paint(graphics);
+            this.leftEye.paint(graphics);
+            this.rightEye.paint(graphics);
             this.mouth.paint(graphics);
             this.grass.paint(graphics);
             this.ground.paint(graphics);

@@ -12,9 +12,8 @@ public class Grass extends Canvas{
     public Grass(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
-        this.height = height;
-//        graphics.fillRect(this.x, this.y, this.width, this.height);
         this.width = width;
+        this.height = height;
 
     }
 
